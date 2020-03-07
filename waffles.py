@@ -48,7 +48,6 @@ foodItems = soup.find_all("food")
 # limit the tables you go through to just those and save the episodes.
 breakfast = []
 for food in foodItems:
-    items = foodItems.find_all("name")
-    for i in items: # i represents the element that coresponds with name inside of food
-        breakfast.append(i.get_text())
+    breakfast.append(foodItems.get_text())
+
 print(breakfast)
