@@ -46,9 +46,9 @@ FoodItems = soup.find_all("food")
 # Simply get texts from tables or rows. But if you want to get a specific reason, then you need to identify the table at hand. 
 # Here, our desired tables seem to be tables 2 to 10 (not including special episodes)
 # limit the tables you go through to just those and save the episodes.
-BREAKFAST = []
+breakfast = []
 for food in FoodItems:
     items = FoodItem.find_all("name")
-    for items in food:
-        BREAKFAST.append(food.get_text())
-print(BREAKFAST)
+    for i in food:
+        breakfast.append(food.get_text())
+print(breakfast)
